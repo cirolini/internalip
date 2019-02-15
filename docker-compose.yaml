@@ -1,0 +1,30 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./internalip:/app/internalip
+    environment:
+        REDIS_HOST: redis
+        REDIS_PORT: 6379
+        REDIS_DB: 0
+        FLASK_DEBUG: 1
+    entrypoint: ["uwsgi", "--ini", "/app/wsgi.ini", "--py-autoreload", "1"]
+    networks:
+      - webnet
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data-redis:/data
+    networks:
+      - webnet
+
+networks:
+  webnet:
