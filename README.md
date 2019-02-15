@@ -6,7 +6,7 @@ This is a sample web service to manage a list of IP and IP ranges.
 
 To develop this project you need python 2.7 and Docker
 
-### Prerequisitos
+### Prerequisites
 
 Check if your python version is > 2.7, also is recommended docker compose and virtualenv.
 
@@ -104,7 +104,7 @@ $ docker-compose up app
 
 The same for everytime you modify any application file the web server (uWSGI) will be restarted and you can test your modifications.
 
-## Executing unit tests
+## Running the unit tests
 
 The app is ready to execute unit tests with Pytest integrated with Flask. You need Redis up and a virtualenv with app to execute the tests.
 
@@ -136,7 +136,7 @@ internalIP/api.py                                                               
 internalIP/db.py                                                                      15      1    93%   25
 ```
 
-## Executing Pylint
+## Running the Pylint
 
 Allways check Pylint.
 
