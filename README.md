@@ -33,7 +33,7 @@ $ virtualenv --version
 To get a local version you need follow the steps:
 
 ```
-$ git clone github.tpn.terra.com/Terra/zaz-ws-ip-internal
+$ git clone github.com/cirolini/internalip
 $ cd zaz-ws-ip-internal
 $ virtualenv venv
 $ source venv/bin/activate
